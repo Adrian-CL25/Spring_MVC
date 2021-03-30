@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista cu Players</title>
+</head>
+<body>
+
+<h1 th:align="center" style="color: red">BEST PLAYER LIST</h1>
+
+<table border="10", style="color: darkblue; width:100%">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Team</th>
+        <th>No</th>
+        <th>Position</th>
+    </tr>
+
+    <tr th:each="player:${player}">
+
+        <td th:align="center" th:text="${player.id}";></td>
+        <td th:align="center" th:text="${player.name}"></td>
+        <td th:align="center" th:text="${player.team}"></td>
+        <td th:align="center" th:text="${player.no}"></td>
+        <td th:align="center" th:text="${player.position}"></td>
+
+        </td>
+
+    </tr>
+
+
+
+</table>
+<div align="center">
+    <a href="new">Add new Player</a>
+
+</div>
+</body>
+</html>

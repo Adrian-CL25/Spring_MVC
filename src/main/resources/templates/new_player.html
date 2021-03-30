@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create New player</title>
+</head>
+<body>
+<div align="center">
+    <h1>Create New Player</h1>
+    <br/>
+    <form action="#" th:action="@{/save}" th:object="${newPlayer}" method="post">
+        <table border="0" cellpadding="10">
+
+            <tr>
+                <td>Name:</td>
+                <td>:<input type="text" th:field="*{name}"/></td>
+            </tr>
+
+            <tr>
+                <td>No:</td>
+                <td>:<input type="text" th:field="*{no}"/></td>
+            </tr>
+            <tr>
+                <td>Position:</td>
+                <td>:<input type="text" th:field="*{position}"/></td>
+            </tr>
+            <tr>
+                <td>Team:</td>
+                <td>:<input type="text" th:field="*{team}"/></td>
+            </tr>
+
+
+            <tr>
+                <td colspan="2"><button type="submit">SAVE</button></td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
